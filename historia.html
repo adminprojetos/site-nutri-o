@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Minha História — Letícia Dalprá</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/><path d="M12 7v6" stroke-linecap="round"/>
+      </svg>
+      <div><h1>Letícia Dalprá</h1><p class="micro">Futura Nutricionista</p></div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li>
+        <li><a href="historia.html">Minha História</a></li><li><a href="receitas.html">Receitas</a></li>
+        <li><a href="conteudos.html">Conteúdos Educativos</a></li><li><a href="contato.html" class="btn-ghost">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+  </div>
+</header>
+
+<section class="historia-pro">
+  <div class="container historia-pro-inner">
+    <div class="historia-pro-foto fade-in"><img src="eu.jpeg" alt="Foto de Letícia Dalprá"></div>
+    <div class="historia-pro-texto slide-up">
+      <h2 class="section-title">Minha História</h2>
+      <p><strong>Na infância e adolescência, enfrentei a obesidade (grau II).</strong> Isso afetou autoestima, energia e saúde.</p>
+      <p>Consegui sair da obesidade sem cirurgias, remédios ou ajuda profissional na época — mas ainda não sabia me alimentar bem.</p>
+      <p>Mais tarde, desenvolvi <em>resistência à insulina (sem diabetes)</em> e procurei uma nutricionista. Minha visão sobre alimentação mudou.</p>
+      <p><strong>Entendi que nutrição é equilíbrio e respeito ao corpo.</strong> Daí nasceu meu propósito: estudar Nutrição e compartilhar um caminho mais leve.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><p>© <span id="year"></span> Letícia Dalprá.</p></div></footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('darkToggle');
+  if(localStorage.getItem('darkMode') === 'true'){ document.documentElement.classList.add('dark'); }
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+  });
+</script>
+</body>
+</html>
