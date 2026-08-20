@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conteúdos Educativos — Letícia Dalprá</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/></svg>
+      <div><h1>Letícia Dalprá</h1><p class="micro">Futura Nutricionista</p></div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li>
+        <li><a href="historia.html">Minha História</a></li><li><a href="receitas.html">Receitas</a></li>
+        <li><a href="conteudos.html">Conteúdos Educativos</a></li><li><a href="contato.html" class="btn-ghost">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+  </div>
+</header>
+
+<section class="receitas-section">
+  <div class="receitas-grid">
+  <a href="conteudo1.html" class="receita-card slide-up">
+    <img src="conteudo1.jpeg" alt="">
+    <h3>Comer bem não é comer pouco</h3>
+  </a>
+
+  <a href="conteudo2.html" class="receita-card slide-up">
+    <img src="conteudo2.jpeg" alt="">
+    <h3>Método do Prato Saudável</h3>
+  </a>
+
+  <a href="conteudo3.html" class="receita-card slide-up">
+    <img src="conteudo3.jpeg" alt="">
+    <h3>Como o sono afeta a alimentação</h3>
+  </a>
+    <a href="conteudo4.html" class="receita-card slide-up">
+  <img src="conteudo4.jpeg" alt="Como ler rótulos de alimentos">
+  <h3>Como ler rótulos de alimentos</h3>
+</a>
+<a href="conteudo5.html" class="receita-card slide-up">
+  <img src="conteudo5.jpeg" alt="Mitos sobre carboidratos">
+  <h3>Mitos sobre Carboidratos</h3>
+</a>
+</div>
+</section>
+
+<script>
+  const toggle = document.getElementById('darkToggle');
+  if(localStorage.getItem('darkMode') === 'true'){ document.documentElement.classList.add('dark'); }
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+  });
+</script>
+</body>
+
+</html>
