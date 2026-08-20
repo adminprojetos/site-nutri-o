@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Sobre o Site — Letícia Dalprá</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="1.2">
+        <path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/><path d="M12 7v6" stroke-linecap="round"/>
+      </svg>
+      <div><h1>Letícia Dalprá</h1><p class="micro">Futura Nutricionista</p></div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li>
+        <li><a href="historia.html">Minha História</a></li><li><a href="receitas.html">Receitas</a></li>
+        <li><a href="conteudos.html">Conteúdos Educativos</a></li><li><a href="contato.html" class="btn-ghost">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+  </div>
+</header>
+
+<section class="sobre-pro">
+  <div class="container sobre-pro-inner no-photo">
+    <div class="sobre-pro-texto fade-in">
+      <h2 class="sobre-pro-titulo">O que é este site?</h2>
+      <p class="sobre-pro-desc">Um espaço para reunir minha evolução rumo à Nutrição: receitas fáceis, conteúdos educativos e reflexões sobre hábitos saudáveis.</p>
+      <p class="sobre-pro-desc">Quero transformar informação em algo leve, útil e aplicável — sem complicação e sem culpa.</p>
+      <p class="sobre-pro-desc">Aqui você encontra conhecimento prático para o dia a dia, com carinho e propósito.</p>
+      <div class="sobre-pro-lista">
+        <p>• Conteúdos fáceis de entender</p>
+        <p>• Receitas acessíveis</p>
+        <p>• Temas importantes explicados de forma leve</p>
+        <p>• Minha visão pessoal e meu progresso</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer"><div class="container"><p>© <span id="year"></span> Letícia Dalprá.</p></div></footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const toggle = document.getElementById('darkToggle');
+  if(localStorage.getItem('darkMode') === 'true'){ document.documentElement.classList.add('dark'); }
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+  });
+</script>
+</body>
+</html>
