@@ -1,77 +1,202 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato — Letícia Dalprá</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
-      <svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/></svg>
-      <div><h1>Letícia Dalprá</h1><p class="micro">Futura Nutricionista</p></div>
+      <h1>Letícia Dalprá</h1>
+      <div class="micro">Futura Nutricionista</div>
     </div>
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li>
-        <li><a href="historia.html">Minha História</a></li><li><a href="receitas.html">Receitas</a></li>
-        <li><a href="conteudos.html">Conteúdos Educativos</a></li><li><a href="contato.html" class="btn-ghost">Contato</a></li>
-      </ul>
-    </nav>
-    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+
+    <div class="header-actions">
+
+      <!-- MENU -->
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir menu">
+        ☰
+      </button>
+
+      <!-- DARK MODE -->
+      <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">
+        🌙
+      </button>
+
+    </div>
+
   </div>
+
+  <!-- MENU OCULTO -->
+  <nav id="mobileMenu" class="mobile-menu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="historia.html">Minha História</a></li>
+      <li><a href="receitas.html">Receitas</a></li>
+      <li><a href="conteudos.html">Conteúdos Educativos</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
 </header>
 
+
 <section class="contato-pro">
+
   <div class="container contato-inner">
+
     <div class="contato-cards">
+
       <h2 class="contato-title">Fale comigo! 💬</h2>
-      <p class="contato-sub">Escolha uma forma de contato — respondo rapidinho.</p>
 
+      <p class="contato-sub">
+        Escolha uma forma de contato — respondo rapidinho.
+      </p>
+
+
+      <!-- WHATSAPP -->
       <a href="https://wa.me/554788666531" target="_blank" class="card-click">
+
         <div class="icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M3 20l1.3-4.4a8 8 0 1 1 3.1 3.1L3 20z"/><path d="M8 9c0 3 3 6 6 6l2-2"/>
+          <svg width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor">
+
+            <path d="M3 20l1.3-4.4a8 8 0 1 1 3.1 3.1L3 20z"/>
+            <path d="M8 9c0 3 3 6 6 6l2-2"/>
+
           </svg>
         </div>
-        <div><h3>WhatsApp</h3><p>+55 47 98866-6531</p></div>
+
+        <div>
+          <h3>WhatsApp</h3>
+          <p>+55 47 98866-6531</p>
+        </div>
+
       </a>
 
+
+      <!-- E-MAIL -->
       <a href="mailto:leticiadalpra09@gmail.com" class="card-click">
+
         <div class="icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <path d="M4 4h16v16H4z"/><path d="M4 8l8 5 8-5"/>
+          <svg width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor">
+
+            <path d="M4 4h16v16H4z"/>
+            <path d="M4 8l8 5 8-5"/>
+
           </svg>
         </div>
-        <div><h3>E-mail</h3><p>leticiadalpra09@gmail.com</p></div>
+
+        <div>
+          <h3>E-mail</h3>
+          <p>leticiadalpra09@gmail.com</p>
+        </div>
+
       </a>
 
-      <a href="https://instagram.com/leticiadeavilad" target="_blank" class="card-click">
+
+      <!-- INSTAGRAM -->
+      <a href="https://instagram.com/leticiadeavilad"
+         target="_blank"
+         class="card-click">
+
         <div class="icon">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3"/><circle cx="16.5" cy="7.5" r="1"/>
+          <svg width="26" height="26" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor">
+
+            <rect x="4" y="4" width="16" height="16" rx="4"/>
+            <circle cx="12" cy="12" r="3"/>
+            <circle cx="16.5" cy="7.5" r="1"/>
+
           </svg>
         </div>
-        <div><h3>Instagram 1</h3><p>@leticiadeavilad</p></div>
+
+        <div>
+          <h3>Instagram</h3>
+          <p>@leticiadeavilad</p>
+        </div>
+
       </a>
 
-      <a href="https://wa.me/554788666531" target="_blank" class="btn-fale">Enviar mensagem →</a>
+
+      <!-- BOTÃO -->
+      <a href="https://wa.me/554788666531"
+         target="_blank"
+         class="btn-fale">
+
+        Enviar mensagem →
+
+      </a>
+
     </div>
 
-    <div class="contato-foto fade-in"><img src="eu.jpeg" alt="Foto de Letícia"></div>
+
+    <!-- FOTO -->
+    <div class="contato-foto fade-in">
+
+      <img src="eu.jpeg" alt="Foto de Letícia">
+
+    </div>
+
   </div>
+
 </section>
 
-<script>
-  const toggle = document.getElementById('darkToggle');
-  if(localStorage.getItem('darkMode') === 'true'){ document.documentElement.classList.add('dark'); }
-  toggle.addEventListener('click', () => {
-    document.documentElement.classList.toggle('dark');
-    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
-  });
-</script>
-</body>
 
+<script>
+
+  /* =========================
+     DARK MODE
+  ========================= */
+
+  const toggle = document.getElementById('darkToggle');
+
+  if (localStorage.getItem('darkMode') === 'true') {
+    document.documentElement.classList.add('dark');
+  }
+
+  toggle.addEventListener('click', () => {
+
+    document.documentElement.classList.toggle('dark');
+
+    localStorage.setItem(
+      'darkMode',
+      document.documentElement.classList.contains('dark')
+    );
+
+  });
+
+
+  /* =========================
+     MENU
+  ========================= */
+
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+
+    mobileMenu.classList.toggle('open');
+
+    if (mobileMenu.classList.contains('open')) {
+      menuToggle.textContent = '✕';
+      menuToggle.setAttribute('aria-label', 'Fechar menu');
+    } else {
+      menuToggle.textContent = '☰';
+      menuToggle.setAttribute('aria-label', 'Abrir menu');
+    }
+
+  });
+
+</script>
+
+</body>
 </html>
