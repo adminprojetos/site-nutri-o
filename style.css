@@ -1,0 +1,493 @@
+/* ===========================
+   VARIÁVEIS + BASE
+=========================== */
+:root {
+  --sage-900: #2e4030;
+  --sage-700: #556b56;
+  --sage-500: #7f9a7b;
+  --sage-300: #b7c7b0;
+
+  --sand-100: #f4f2ec;
+  --white: #ffffff;
+
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* modo claro */
+  --bg-light: #f4f2ec;
+  --text-light: #2e4030;
+  --card-light: #ffffff;
+  --accent-light: #7f9a7b;
+
+  /* modo escuro */
+  --bg-dark: #1d1f1b;
+  --text-dark: #e6e6e6;
+  --card-dark: #2a2c27;
+  --accent-dark: #b4e2b0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--sand-100);
+  color: var(--sage-900);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--white);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 900;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--sage-900);
+}
+
+.micro {
+  font-size: 13px;
+  margin-top: -6px;
+  color: var(--sage-700);
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 26px;
+  list-style: none;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 15px;
+  color: var(--sage-900);
+  transition: 0.25s var(--ease);
+}
+
+.main-nav a:hover {
+  color: var(--sage-500);
+}
+
+.btn-ghost {
+  padding: 8px 16px;
+  border-radius: 10px;
+  border: 1.5px solid var(--sage-300);
+}
+
+/* botão dark mode */
+.dark-toggle {
+  background: var(--sage-500);
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.25s;
+  margin-left: 12px;
+}
+
+.dark-toggle:hover {
+  background: var(--sage-700);
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero-pro {
+  padding-top: 150px;
+  padding-bottom: 70px;
+}
+
+.hero-pro-inner.single-col {
+  text-align: left;
+  max-width: 760px;
+}
+
+.hero-pro-nome {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero-pro-desc {
+  margin-bottom: 18px;
+  color: var(--sage-700);
+  font-size: 15px;
+}
+
+/* ===========================
+   HOME - CARDS
+=========================== */
+.index-cards {
+  padding-bottom: 100px;
+}
+
+.index-cards-title {
+  font-size: 24px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+.index-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.index-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+  text-decoration: none;
+  color: var(--sage-900);
+  transition: 0.25s var(--ease);
+}
+
+.index-card:hover {
+  transform: translateY(-4px);
+}
+
+/* ===========================
+   SOBRE
+=========================== */
+.sobre-pro {
+  padding-top: 170px;
+  padding-bottom: 80px;
+}
+
+.sobre-pro-inner.no-photo {
+  max-width: 760px;
+}
+
+.sobre-pro-titulo {
+  font-size: 30px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.sobre-pro-titulo::after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: var(--sage-500);
+  border-radius: 3px;
+  display: block;
+  margin-top: 8px;
+}
+
+.sobre-pro-desc {
+  margin-bottom: 22px;
+  line-height: 1.75;
+  color: var(--sage-700);
+}
+
+/* ===========================
+   HISTÓRIA - FOTO LATERAL
+=========================== */
+.historia-pro {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.historia-pro-inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 40px;
+}
+
+.historia-pro-foto img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ===========================
+   RECEITAS + CONTEÚDOS — CARDS
+=========================== */
+.receitas-section {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.receitas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+}
+
+.receita-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 12px;
+  text-decoration: none;
+  color: var(--sage-900);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  transition: 0.25s;
+}
+
+.receita-card:hover {
+  transform: translateY(-4px);
+}
+
+.receita-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.receita-card h3 {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 17px;
+}
+
+/* ===========================
+   RECEITA INDIVIDUAL
+=========================== */
+.receita-page {
+  padding-top: 150px;
+  padding-bottom: 60px;
+}
+
+.receita-foto {
+  width: 100%;
+  height: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 22px;
+}
+
+.receita-title {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+/* ===========================
+   CONTATO - CARDS + FOTO
+=========================== */
+.contato-pro {
+  padding-top: 150px;
+  padding-bottom: 80px;
+}
+
+.contato-inner {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 40px;
+}
+
+.contato-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.contato-sub {
+  margin-bottom: 24px;
+  color: var(--sage-700);
+}
+
+.card-click {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background: #fff;
+  border-radius: 14px;
+  text-decoration: none;
+  color: var(--sage-900);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.07);
+  transition: 0.25s;
+}
+
+.card-click:hover {
+  transform: translateY(-4px);
+}
+
+.card-click svg {
+  stroke: var(--sage-500);
+  transition: 0.25s;
+}
+
+.card-click:hover svg {
+  stroke: var(--sage-700);
+}
+
+.contato-foto img {
+  width: 100%;
+  height: 320px;
+  border-radius: 14px;
+  object-fit: cover;
+}
+
+/* botão enviar */
+.btn-fale {
+  display: block;
+  margin-top: 25px;
+  padding: 14px;
+  background: var(--sage-500);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.site-footer {
+  padding: 35px;
+  background: var(--white);
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.site-footer a {
+  text-decoration: none;
+  color: var(--sage-700);
+}
+
+/* ===========================
+   DARK MODE
+=========================== */
+
+.dark body {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+.dark .site-header {
+  background: #252722;
+}
+
+.dark .main-nav a {
+  color: var(--text-dark);
+}
+
+.dark .index-card,
+.dark .receita-card,
+.dark .card-click,
+.dark .card {
+  background: var(--card-dark);
+}
+
+.dark h1, .dark h2, .dark h3, .dark p, .dark li {
+  color: var(--text-dark);
+}
+
+.dark .btn-fale {
+  background: var(--accent-dark);
+  color: #1d1f1b;
+}
+
+/* ===========================
+   ANIMAÇÕES
+=========================== */
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 0.7s ease forwards;
+}
+
+@keyframes fadeIn { to { opacity: 1; } }
+@keyframes slideUp { to { opacity: 1; transform: translateY(0); } }
+
+/* ===========================
+   RESPONSIVO
+=========================== */
+@media(max-width: 900px){
+
+  .main-nav ul {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .historia-pro-inner,
+  .contato-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-foto img {
+    height: 300px;
+    margin-top: 20px;
+  }
+
+}
+/* BOTÃO VOLTAR — FIXO NO CANTO INFERIOR DIREITO */
+.btn-voltar {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  background: var(--sage-500);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+
+  transition: 0.25s ease;
+  z-index: 999;
+}
+
+.btn-voltar:hover {
+  background: var(--sage-700);
+  transform: translateY(-3px);
+}
+
+/* DARK MODE */
+.dark .btn-voltar {
+  background: var(--accent-dark);
+  color: #1d1f1b;
+}
