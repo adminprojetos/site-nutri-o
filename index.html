@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,10 @@
 </head>
 
 <body>
+
 <header class="site-header">
   <div class="container header-inner">
+
     <div class="brand">
       <h1>Letícia Dalprá</h1>
       <div class="micro">Futura Nutricionista</div>
@@ -25,6 +28,9 @@
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
+
+    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+
   </div>
 </header>
 
@@ -67,10 +73,23 @@
 
   </div>
 </section>
+
 <script>
+  const toggle = document.getElementById('darkToggle');
+
   if(localStorage.getItem('darkMode') === 'true'){
     document.documentElement.classList.add('dark');
   }
+
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+
+    localStorage.setItem(
+      'darkMode',
+      document.documentElement.classList.contains('dark')
+    );
+  });
 </script>
+
 </body>
 </html>
