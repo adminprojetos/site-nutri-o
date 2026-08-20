@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Receitas — Letícia Dalprá</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" width="34" height="34"><path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"/></svg>
+      <div><h1>Letícia Dalprá</h1><p class="micro">Futura Nutricionista</p></div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Início</a></li><li><a href="sobre.html">Sobre</a></li>
+        <li><a href="historia.html">Minha História</a></li><li><a href="receitas.html">Receitas</a></li>
+        <li><a href="conteudos.html">Conteúdos Educativos</a></li><li><a href="contato.html" class="btn-ghost">Contato</a></li>
+      </ul>
+    </nav>
+    <button id="darkToggle" class="dark-toggle" aria-label="Alternar modo escuro">🌙</button>
+  </div>
+</header>
+
+<section class="receitas-section">
+  <div class="receitas-grid">
+  <a href="overnight.html" class="receita-card slide-up">
+    <img src="overnight.jpeg" alt="Overnight oats">
+    <h3>Overnight Oats</h3>
+  </a>
+
+  <a href="ovo-mexido.html" class="receita-card slide-up">
+    <img src="ovo-mexido.jpeg" alt="Ovo mexido rápido">
+    <h3>Lanche rápido de ovo mexido</h3>
+  </a>
+
+  <a href="granola.html" class="receita-card slide-up">
+    <img src="granola.jpeg" alt="Granola caseira">
+    <h3>Iogurte com granola caseira</h3>
+  </a>
+    
+    <a href="sorvete.html" class="receita-card slide-up">
+  <img src="sorvete.jpeg" alt="Sorvete saudável de banana">
+  <h3>Sorvete Saudável de Banana</h3>
+</a>
+
+    <a href="bolo-mesclado.html" class="receita-card slide-up">
+    <img src="bolo.jpeg" alt="Bolo mesclado sem açúcar">
+    <h3>Bolo sem açúcar e sem glúten</h3>
+  </a>
+    
+</div>
+</section>
+
+<script>
+  const toggle = document.getElementById('darkToggle');
+  if(localStorage.getItem('darkMode') === 'true'){ document.documentElement.classList.add('dark'); }
+  toggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.documentElement.classList.contains('dark'));
+  });
+</script>
+</body>
+</html>
+
+
+
